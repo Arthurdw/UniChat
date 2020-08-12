@@ -2,6 +2,7 @@ import React from "react";
 import BackgroundSection from "../theme/chat/menu/BackgroundSection";
 import XilerChatSection, {
   XilerChatHeader,
+  XilerChatHeaderChat as XSpan,
   XilerChatIcon,
   XilerChatIconGroup,
   XilerChatIconPath,
@@ -27,7 +28,7 @@ class Menu extends React.Component<{path: string}> {
 function UniChatTitle() {
   return (
     <XilerChatSection>
-      <XilerChatHeader>Uni Chat</XilerChatHeader>
+      <XilerChatHeader>Uni<XSpan>Chat</XSpan></XilerChatHeader>
       <PoweredBy />
     </XilerChatSection>
   );

@@ -21,6 +21,10 @@ const XilerChatHeader = styled.h1`
   font-size: calc(${menu.width} / 4.4);
 `;
 
+const XilerChatHeaderChat = styled.span`
+  color: ${(props) => props.theme.accent_color};
+`;
+
 const XilerChatIcon = styled.svg.attrs({
   // src: "/assets/XilerLogo.svg"
   viewBox: "0 0 5000.000000 5000.000000",
@@ -44,9 +48,14 @@ const XilerChatIconPath = styled.path.attrs({
   position: relative;
 `;
 
-const XilerChatPoweredBySection = styled.div`
+const XilerChatPoweredBySection = styled.a.attrs({
+  href: "https://www.xiler.net/",
+  target: "_blanc",
+})`
   position: absolute;
   bottom: 10px;
+  color: ${(props) => props.theme.light_color};
+  text-decoration: none;
   background-color: ${(props) => props.theme.dark_color};
   padding: 10px 0;
   z-index: 9000;
@@ -86,6 +95,7 @@ const XilerChatPoweredBySectionTextXiler = styled.h2`
 
 export {
   XilerChatHeader,
+  XilerChatHeaderChat,
   XilerChatIcon,
   XilerChatIconGroup,
   XilerChatIconPath,

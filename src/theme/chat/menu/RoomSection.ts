@@ -50,7 +50,8 @@ const RoomWrapperLink = styled(Link)<{ to: string, selected: boolean } >`
 
   &::before {
     content: "${menu.rooms.prefix}";
-    color: ${(props) => props.theme.dark_light_color}
+    color: ${(props) => props.theme.accent_color};
+    opacity: ${(props) => props.selected ? 1 : 0.5}
   }
 `;
 
