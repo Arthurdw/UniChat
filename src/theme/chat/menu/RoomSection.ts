@@ -3,6 +3,7 @@ import menu from "../../properties/MenuProperties";
 import { Link } from "react-router-dom";
 
 const RoomSectionWrapper = styled.div`
+user-select: none;
   position: absolute;
   top: ${menu.rooms.top};
   width: ${menu.rooms.width};

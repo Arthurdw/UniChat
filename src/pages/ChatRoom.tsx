@@ -3,6 +3,7 @@ import {ThemeProvider} from "styled-components";
 import { original } from "../theme/colors";
 
 import Menu from "../components/Menu";
+import Room from "../components/Room";
 
 interface ChatRoomProps {
   location: {
@@ -16,6 +17,7 @@ class ChatRoom extends React.Component<ChatRoomProps> {
     return (
       <ThemeProvider theme={original}>
         <Menu path={this.props.location.pathname.substr(1)} />
+        <Room path={this.props.location.pathname.substr(1)} />
       </ThemeProvider>
     )
   }

@@ -5,11 +5,11 @@ const rooms: { name: string; description: string }[] = [
   },
   {
     name: "General",
-    description: "General chat, english or dutch only!",
+    description: "General chat, English or Dutch only!",
   },
   {
     name: "Off Topic",
-    description: "Any language!",
+    description: "Feel free to talk in any language here!",
   },
 ];
 

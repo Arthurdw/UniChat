@@ -7,9 +7,9 @@ const XilerChatSection = styled.div`
   position: sticky;
   left: 0;
   top: 0;
-  height: calc(${menu.height} - 10px);
+  height: ${menu.height};
   width: calc(${menu.width} - 10px);
-  padding: 10px;
+  padding: 0 10px;
   user-select: none;
 `;
 
