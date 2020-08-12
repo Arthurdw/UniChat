@@ -44,6 +44,7 @@ const RoomWrapperLink = styled(Link)<{ to: string, selected: boolean } >`
   text-decoration: none;
   display: block;
   border-radius: 3px;
+  font-size: calc(${menu.width} / 8);
   line-height: 100%;
   width: calc(100% - 10px);
   height: calc(100% - 10px);

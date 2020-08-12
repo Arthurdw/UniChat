@@ -4,6 +4,7 @@ const original = {
   dark_light_color: "#ccc5b9",
   dark_color: "#252422",
   light_dark_color: "#403d39",
+  darker_light_dark_color: "#363330",
   xiler_color: "#1985a1",
 } 
 

@@ -3,6 +3,7 @@ import menu from "../../properties/MenuProperties";
 import room from "../../properties/RoomProperties";
 
 const RoomHeaderWrapper = styled.div`
+  user-select: none;
   position: relative;
   height: 100%;
 `;
