@@ -12,27 +12,35 @@ import { Context } from "./Room";
 
 // import rooms from "../data/rooms";
 
-class RoomChatSection extends React.Component<{ data: Context[] }> {
-  addMessage = (ctx: Context) => {
-    this.setState({ data: [ctx, ...this.props.data] });
-  };
+class Message extends React.Component<{ ctx: Context }> {
+  render() {
+    return (
+      <React.Fragment>
+        <MessageWrapper>
+          <MessageAuthorAvatar src={this.props.ctx.author.avatar} />
+          <MessageContentWrapper>
+            <MessageAuthorName date={this.props.ctx.timestamp}>
+              {this.props.ctx.author.name}
+            </MessageAuthorName>
+            <MessageContent>{this.props.ctx.message}</MessageContent>
+          </MessageContentWrapper>
+        </MessageWrapper>
+        <Clearer />
+      </React.Fragment>
+    );
+  }
+}
+
+class RoomChatSection extends React.Component<{
+  data: Context[];
+  roomTextHeight: number;
+}> {
 
   renderMessages = () => {
     return (
       <React.Fragment>
         {this.props.data.map((ctx: Context, index) => (
-          <React.Fragment key={index}>
-            <MessageWrapper>
-              <MessageAuthorAvatar src={ctx.author.avatar} />
-              <MessageContentWrapper>
-                <MessageAuthorName date={ctx.timestamp}>
-                  {ctx.author.name}
-                </MessageAuthorName>
-                <MessageContent>{ctx.message}</MessageContent>
-              </MessageContentWrapper>
-            </MessageWrapper>
-            <Clearer />
-          </React.Fragment>
+          <Message key={index} ctx={ctx} />
         ))}
       </React.Fragment>
     );
@@ -40,7 +48,7 @@ class RoomChatSection extends React.Component<{ data: Context[] }> {
 
   render() {
     return (
-      <BackgroundSection>
+      <BackgroundSection roomTextHeight={this.props.roomTextHeight}>
         <ChatWindow>
           <this.renderMessages />
         </ChatWindow>

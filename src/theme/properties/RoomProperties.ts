@@ -1,10 +1,11 @@
 const room = {
   roomHeader: {
-    height: "60px"
+    height: "60px",
   },
   roomText: {
-    height: "80px"
-  }
-}
+    increment: 16,
+    height: 80,
+  },
+};
 
 export default room;

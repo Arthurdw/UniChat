@@ -4,7 +4,7 @@ import room from "../../properties/RoomProperties";
 const ChatWindow = styled.div`
   margin: 10px 5px 0 0;
   height: calc(
-    100vh - ${room.roomHeader.height} - 2px - ${room.roomText.height} - 10px
+    100vh - ${room.roomHeader.height} - 2px - ${room.roomText.height}px - 10px
   );
   width: calc(100% - 5px);
   display: flex;
