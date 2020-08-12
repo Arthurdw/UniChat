@@ -1,0 +1,15 @@
+{
+    "plugins": [
+      [
+        "babel-plugin-styled-components",
+        {
+          "displayName": false,
+          "fileName": false,
+          "minify": true,
+          "transpileTemplateLiterals": true,
+          "pure": true,
+          "namespace": "xiler-chat"
+        }
+      ]
+    ]
+  }
