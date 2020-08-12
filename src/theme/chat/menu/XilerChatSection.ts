@@ -18,7 +18,7 @@ const XilerChatHeader = styled.h1`
   width: 100%;
   text-align: center;
   z-index: 10000;
-  font-size: calc(${menu.width} / 4.4);
+  font-size: calc(${menu.width} / 4);
 `;
 
 const XilerChatHeaderChat = styled.span`
@@ -53,11 +53,11 @@ const XilerChatPoweredBySection = styled.a.attrs({
   target: "_blanc",
 })`
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   color: ${(props) => props.theme.light_color};
   text-decoration: none;
   background-color: ${(props) => props.theme.dark_color};
-  padding: 10px 0;
+  padding: 10px 10px 0 10px;
   z-index: 9000;
 `;
 
@@ -80,7 +80,7 @@ const XilerChatPoweredBySectionTextPoweredBy = styled.h3`
   width: 100%;
   padding: 0;
   margin: 0;
-  font-size: calc(${menu.width} / 5.6);
+  font-size: calc(${menu.width} / 6.4);
   line-height: calc(${menu.width} / 7.5);
 `;
 
@@ -89,7 +89,7 @@ const XilerChatPoweredBySectionTextXiler = styled.h2`
   height: 60%;
   padding: 0;
   margin: 0;
-  font-size: calc(${menu.width} / 3.4);
+  font-size: calc(${menu.width} / 4.25);
   line-height: calc(${menu.width} / 4);
 `;
 
