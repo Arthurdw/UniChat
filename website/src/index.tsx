@@ -4,6 +4,8 @@ import App from "./App";
 
 import "./style/general.css";
 
+document.cookie = "SameSite=None; Secure";
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

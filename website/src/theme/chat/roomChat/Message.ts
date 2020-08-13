@@ -6,6 +6,10 @@ function formatNumber(numb: number) {
 }
 
 function getFormattedDate(date: Date) {
+  if (typeof date === "string") {
+    date = new Date(date);
+  }
+
   return date.getDate() === new Date().getDate()
     ? `Today at ${formatNumber(date.getHours())}:${formatNumber(
         date.getMinutes()
