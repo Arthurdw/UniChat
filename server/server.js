@@ -21,15 +21,7 @@ io.on("connection", (socket) => {
     console.log(
       `\x1b[95m${socket.handshake.address}\x1b[39m: \x1b[94mRequested messages\x1b[39m on for #${channel} \x1b[93m${socket.id}\x1b[39m`
     );
-    socket.emit("messages", [{
-      message: channel,
-      timestamp: new Date(),
-      channel: channel,
-      author: {
-        name: "Jeff",
-        avatar: "https://via.placeholder.com/150/FF0000/000000",
-      },
-    }]);
+    socket.emit("messages", []);
   });
 
   socket.on("message", (message) => {
